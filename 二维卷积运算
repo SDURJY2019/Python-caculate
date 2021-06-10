@@ -1,0 +1,30 @@
+'''
+a=[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]]
+b=[[1,1],[1,1]]
+c=[]
+d=[]
+for m in range(0,len(a)-len(b)+1):
+    for n in range(0,len(a[0])-len(b[0])+1):
+        y=0
+        for i in range(0,len(b)):
+            for j in range(0,len(b[0])):
+                y=y+a[m+i][n+j]*b[i][j]
+    c.append(y)
+    d.append(c)
+print(d)
+#print(list(range(0,10,1)))
+'''
+import numpy as np
+
+a=np.ones([4,4])
+print(a)
+b=np.ones([2,2])
+c=[]
+for m in range(0,len(a)-len(b)+1):
+    for n in range(0,len(a[0])-len(b[0])+1):
+        c=a[m:m+2][:,[n,n+2]]
+        #y=np.inner(c,b)
+        #print(y)
+    c.append(y)
+    d.append(c)
+print(c)
